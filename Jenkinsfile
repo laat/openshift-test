@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { docker 'build-image:latest' }
     stages {
         stage('Install') {
             steps {
