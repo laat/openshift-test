@@ -1,9 +1,10 @@
+
 pipeline {
-    agent { docker 'build-image:latest' }
+    agent any
     stages {
         stage('Install') {
             steps {
-                sh 'echo install'
+                sh "oc start-build laat-jenkins --follow"
             }
         }
     }
